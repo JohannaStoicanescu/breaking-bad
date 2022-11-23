@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 .app{
   height: 100vh;
   width: 100vw;
@@ -14,3 +15,16 @@ align-items:flex-start;
 }
 
 
+=======
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main {
+  width: 100%;
+}
+>>>>>>> 8c971e66c7cdf71889af3729f6001213d028eb8c

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function Home() {
   return (
     <div className='home'>
-        <button><Link to="/gameplay"> Test me .. I'm a danger!</Link></button>
+        <button className="buttonHome"><Link to="/gameplay"> Test me .. I'm a danger!</Link></button>
     </div>
   )
 }
