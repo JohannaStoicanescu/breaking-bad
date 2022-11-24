@@ -7,21 +7,11 @@
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background: rgb(20, 20, 20);
-  background: linear-gradient(
-    180deg,
-    rgb(4, 61, 0) 0%,
-    rgb(0, 8, 0) 2%,
-    rgb(0, 8, 0) 100%
-  );
 }
 .logo {
   display: flex;
   justify-content: center;
   margin: 60px;
-}
-
-.logo > img {
-  height: 120px;
 }
 
 .quote {

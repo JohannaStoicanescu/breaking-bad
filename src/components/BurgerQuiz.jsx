@@ -12,6 +12,7 @@ function BurgerQuiz() {
   const [characters, setCharacters] = useState([]);
   const [resultat, setResultat] = useState();
   const [disabled, setDisabled] = useState(false);
+  const [count, setCounter] = useState(0);
   const getQuote = () => {
     axios
       .get("https://www.breakingbadapi.com/api/quote/random")
@@ -76,34 +77,48 @@ function BurgerQuiz() {
     }
   };
 
+  const finalScore = () => {
+    if (count === 20) {
+      return;
+    }
+  };
   return (
     <div className="burgerQuiz">
       <TopLogo />
       <div className="topBurger">
         <h3 className="titleBurger">Guess the character</h3>
-        <h3 className="quoteBurger">" {currentQuote.quote} "</h3>
       </div>
 
       <p>{resultat}</p>
       <div className="buttons">
-        {" "}
-        {answers.map((el) => {
-          return (
-            <button
-              disabled={disabled}
-              key={el}
-              onClick={() => {
-                result(el);
-                setTimeout(() => {
-                  getQuote();
-                }, 1500);
-                setDisabled(true);
-              }}
-            >
-              {el}
-            </button>
-          );
-        })}
+        {count === 5 ? (
+          <p style={{ fontSize: "40px" }}>Well Done</p>
+        ) : (
+          <div className="divGame">
+            <h3 className="quoteBurger">" {currentQuote.quote} "</h3>
+            <div className="divButton">
+              {" "}
+              {answers.map((el) => {
+                return (
+                  <button
+                    disabled={disabled}
+                    key={el}
+                    onClick={() => {
+                      result(el);
+                      setTimeout(() => {
+                        getQuote();
+                      }, 1500);
+                      setDisabled(true);
+                      setCounter(count + 1);
+                    }}
+                  >
+                    {el}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
 
       <p className="score">Score : {score}</p>

@@ -26,11 +26,22 @@
 
 h3.titleBurger {
   font-size: 40px;
+  margin-bottom: 40px;
 }
 
 .burgerQuiz p {
   color: white;
   font-size: 25px;
+}
+
+.divGame {
+  display: flex;
+  flex-direction: column;
+}
+
+.divButton {
+  display: flex;
+  justify-content: center;
 }
 
 .burgerQuiz button {
@@ -62,7 +73,7 @@ h3.titleBurger {
 
 .score {
   color: white;
-  margin: 30px 15px 150px;
+  margin: 30px 15px 60px;
   background-color: rgb(4, 61, 0);
   padding: 10px;
   border-radius: 10px;
